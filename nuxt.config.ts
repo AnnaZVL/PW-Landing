@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     }
   },
   app: {
-    baseURL: '/имя-вашего-репозитория/',
+    baseURL: '/PW-Landing/',
     head: {
       meta: [
         
@@ -28,8 +28,6 @@ export default defineNuxtConfig({
     }
   },
   plugins: ['~/plugins/shared-components.js'],
-  // ssr: false, // Отключает серверный рендеринг (SPA-режим)
-  // generate: {
-  //   dir: 'dist' // Папка, куда будет собран статический сайт
-  // },
+  ssr: false, // Отключает серверный рендеринг (SPA-режим)
+ 
 })
