@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     }
   },
   app: {
-    baseURL: '/PW-Landing/dist',
+    baseURL: '/PW-Landing/',
     head: {
       meta: [
         
@@ -27,7 +27,5 @@ export default defineNuxtConfig({
       title: 'PulseWave менеджер задач для вашей команды'
     }
   },
-  plugins: ['~/plugins/shared-components.js'],
-  ssr: false, // Отключает серверный рендеринг (SPA-режим)
- 
+  plugins: ['~/plugins/shared-components.js'], 
 })
