@@ -1,0 +1,1 @@
+import{_ as s,c as a,a as n,o}from"./DLd39uEF.js";const t={},c={class:"main"};function r(d,e){return o(),a("main",c,e[0]||(e[0]=[n("p",null,"HOME PAGE",-1)]))}const i=s(t,[["render",r],["__scopeId","data-v-ed19dd28"]]);export{i as default};
