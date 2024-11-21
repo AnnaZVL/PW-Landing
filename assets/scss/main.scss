@@ -1,0 +1,124 @@
+@use "~/assets/scss/_variable.scss";
+@use "~/assets/scss/fonts.scss";
+@use '@pulsewave/shared-components/dist/style.css';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Mulish", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  background-color: $color_white;
+  color: $color_black-default;
+  position: relative;
+}
+
+#app {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  color: $color_text-default;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding: 0 96px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 30px;
+    max-width: 768px;
+  }
+}
+@media (max-width: 572px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+/* Общие стили для всех браузеров */
+/* Ширина полосы прокрутки */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Цвет фона полосы прокрутки */
+::-webkit-scrollbar-track {
+  background-color: $color_hover_board;
+}
+
+/* Цвет самой полосы прокрутки */
+::-webkit-scrollbar-thumb {
+  background-color: $color_light-gray;
+  border-radius: 4px;
+}
+
+// закругление в Firefox
+::-moz-range-thumb {
+  border-radius: 4px;
+}
+//Edge и Internet Explorer
+*::-ms-thumb {
+  border-radius: 4px; /* Закругленные углы для тумблера */
+}
+
+/* Изменение цвета полосы прокрутки при наведении курсора */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Firefox */
+/* Ширина полосы прокрутки */
+html {
+  scrollbar-width: 8px;
+}
+
+/* Цвет полосы прокрутки */
+body {
+  scrollbar-color: $color_light-gray $color_hover_board;
+}
+
+button {
+  font-family: "Mulish", sans-serif;
+}
+
+.no-select {
+  user-select: none;
+}
