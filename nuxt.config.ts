@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     }
   },
   app: {
-    baseURL: '/PW-Landing/',
+    baseURL: '/PW-Landing/dist',
     head: {
       meta: [
         
