@@ -2,16 +2,20 @@
 
 <template>
     <main class="main">
-        <p>HOME PAGE</p>
-        <p>ggg</p>
+      <AppHero/>
+
+      <AppAdvantages/>
+
+      <AppAbout/>
     </main>
 </template>
 
 <style lang="scss" scoped>
 .main {
-    margin: 0 auto;
-    margin-bottom: 97px;
+    margin: 0 auto;    
     width: 100%;
     position: relative;
+    flex-grow: 1;
+    overflow: hidden;
 }
 </style>

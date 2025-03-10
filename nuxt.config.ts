@@ -7,12 +7,12 @@ export default defineNuxtConfig({
   vite: {
     cacheDir: 'node_modules/.vite_cache',
     css: {
-      preprocessorOptions: {
+      preprocessorOptions: {        
         scss: {
-          additionalData: '@use "~/assets/scss/_variable.scss" as *;'
+          additionalData: '@use "~/assets/scss/_variable.scss" as *;'          
         }
       }
-    }
+    }, 
   },
   app: {
     baseURL: '/PW-Landing/',
@@ -24,8 +24,11 @@ export default defineNuxtConfig({
       link: [
         { rel: 'canonical',  href: 'https://pulsewave.ru'}
       ],
-      title: 'PulseWave менеджер задач для вашей команды'
+      title: 'PulseWave менеджер задач для вашей команды',
+      htmlAttrs: {
+        lang: 'ru',
+      },   
     }
   },
-  plugins: ['~/plugins/shared-components.js'], 
+  // plugins: ['~/plugins/shared-components.js'],   
 })

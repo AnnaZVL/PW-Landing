@@ -1,19 +1,13 @@
-<script setup>
-</script>
+<script setup></script>
 
 <template>
-     <div id="app">
-    <AppHeader />
-    <div class="content-wrapper">
-    <slot />
-  </div>
-    <AppFooter />
-  </div>
+    <div id="app">
+        <AppHeader />
+        
+        <slot />
+
+        <AppFooter />
+    </div>
 </template>
 
-<style lang='scss' scoped>
-.content-wrapper {
-    flex-grow: 1;
-    display: flex;
-}
-</style>
+<style lang="scss" scoped></style>

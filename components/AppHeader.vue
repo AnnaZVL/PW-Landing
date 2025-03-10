@@ -1,74 +1,75 @@
 <script setup>
-const route = useRoute()
+import IconLogo from './SVG/IconLogo.vue';
+
+const route = useRoute();
 
 const isFixed = computed(() => {
     switch (route.path) {
         case '/privacy':
-          return 'header-fixed';
+            return 'header-fixed';
         case '/terms':
-          return 'header-fixed';
+            return 'header-fixed';
         default:
-          return '';
-      }
-})
-
+            return '';
+    }
+});
 </script>
 
 <template>
-    <header class="header container" :class="isFixed">
-        <NuxtLink to="/">
-            <img class="header__logo" src="/img/IconLogo.svg" alt="" />
-        </NuxtLink>
-        <!-- <div class="buttons">
-            <NuxtLink to="/privacy">
-                <ButtonComponent size="small"> Privacy </ButtonComponent>
+    <header class="header" :class="isFixed">
+        <div class="header__container container">
+            <NuxtLink to="/" aria-label="На главную">
+                <IconLogo class="header__logo" />
             </NuxtLink>
-            <NuxtLink to="/terms">
-                <ButtonComponent size="small"> Terms </ButtonComponent>
-            </NuxtLink>
-        </div> -->
-        <div class="buttons">
-            <NuxtLink to="https://pulsewave.ru/auth/login">
-            <ButtonComponent size="small"> Войти </ButtonComponent>
-        </NuxtLink>
-        <NuxtLink to="https://pulsewave.ru/auth/signup">
-            <ButtonComponent size="small"> Регистрация </ButtonComponent>
-        </NuxtLink>
-            
+
+            <div class="header__buttons">
+                <NuxtLink class="btn btn--white" to="https://pulsewave.ru/auth/login">
+                    Войти
+                </NuxtLink>
+                <NuxtLink class="btn" to="https://pulsewave.ru/auth/signup">
+                    Бесплатная регистрация</NuxtLink
+                >
+            </div>
         </div>
     </header>
 </template>
 
 <style lang="scss" scoped>
 .header {
-    height: 114px;
     padding-top: 20px;
     padding-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(4px);
+    position: fixed;
+    z-index: 10;
+    inset: 0;
+    height: 80px;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
     &__logo {
-        width: 81px;
-        height: 74px;
+        display: inline-block;
     }
-    
+
     &-fixed {
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         width: 100%;
-        background-color: $color_white;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
     }
 }
-.buttons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
-}
-
 @media (max-width: 768px) {
     .header {
         padding-top: 16px;

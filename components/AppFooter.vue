@@ -14,24 +14,16 @@ const currentYear = new Date().getFullYear();
                 <li class="item">
                     <a class="item__link" href="mailto:info@pulsewave.ru">
                         <span class="item__text item__link-desc">info@pulsewave.ru</span>
-                        <div class="item__link-mobile">
-                            <SVGIconFooterEmail class="item__icon" />
-                            <span class="item__text">Остались вопросы?</span>
-                        </div>
+                        
                     </a>
                 </li>
                 <li class="item">
                     <span class="item__text">&#169;PulseWave, 2023-{{ currentYear }}</span>
                 </li>
             </ul>
-            <span class="item__text footer__progect"
-                >Проект разработан в рамках Pineapple Practice</span
-            >
+            
         </nav>
-        <div class="footer__icons">
-            <SVGIconFooterMan class="footer__icon" />
-            <SVGIconFooterWoman class="footer__icon" />
-        </div>
+        
     </footer>
 </template>
 
@@ -83,26 +75,7 @@ const currentYear = new Date().getFullYear();
         align-self: flex-end;
     }
 
-    &__icons {
-        margin: 0 auto;
-        padding: 0 96px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: absolute;
-        top: -73px;
-        left: 0;
-        right: 0;
-        z-index: -1;
-        max-width: 1440px;
-        width: 100%;
-        height: 75px;
-    }
-
-    &__icon {
-        width: 77px;
-        height: 71px;
-    }
+    
 }
 
 @media (max-width: 768px) {
@@ -149,9 +122,7 @@ const currentYear = new Date().getFullYear();
             font-size: 12px;
             align-self: center;
         }
-        &__icons {
-            display: none;
-        }
+        
     }
 }
 </style>
