@@ -5,6 +5,7 @@
     <section class="about">
         <div class="about__container container">
         <h3 class="about__title"> в PULSEWAVE:</h3>
+        <ul></ul>
     </div>
     </section>
 </template>
